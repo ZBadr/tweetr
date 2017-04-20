@@ -1,0 +1,44 @@
+
+
+/* tweet class for article*/
+
+/*tweet header*/
+#tweetbox header {
+  background-color: #eee;
+ /* height: 100px;*/
+}
+
+#tweetbox header .username {
+  float: center;
+}
+
+/*tweet img*/
+#tweetbox header img {
+
+
+}
+
+/*tweet handle (position: absolute*/
+#tweetbox header .handle {
+  float: right;
+}
+
+/*tweet p*/
+#tweetbox p {
+  height: 150px;
+  border-style: solid;
+  border-color: #eee;
+}
+
+/*tweet footer*/
+#tweetbox footer {
+  border-color: #eee;
+
+}
+
+#tweetbox {
+  margin: 1em;
+  background-color: white;
+  border-color: #eee;
+  border-style: solid;
+}
