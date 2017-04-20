@@ -79,7 +79,20 @@ function renderTweets (arr) {
 
 
 
+
 $(document).ready(function() {
+
+$('#submitTweet').on('click', function(event) {
+  event.preventDefault();
+  $.ajax({
+      url : "/tweets",
+      type: "POST",
+      data : $("#textarea").serialize(),
+      success: function(data) {
+        console.log("Success!");
+      }
+  });
+})
 
 renderTweets(data);
 
