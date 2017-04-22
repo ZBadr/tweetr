@@ -70,10 +70,10 @@ function createTweetElement(obj) {
 }
 
 function renderTweets (arr) {
-  $('#tweetbox').html('');
+  $("#tweetbox").html("");
   for (var i = 0; i < arr.length; i++) {
     let z = createTweetElement(arr[i]);
-    $('#tweetbox').append(z);
+    $("#tweetbox").append(z);
   }
 
 }
@@ -81,21 +81,22 @@ function renderTweets (arr) {
 
 
 $(document).ready(function() {
-$("#textarea").slideUp();
+$(".new-tweet").slideUp();
 
   function loadTweets() {
      $.ajax({
-      url: '/tweets',
-      method: 'GET',
+      url: "/tweets",
+      method: "GET",
       // data: "json",
       success: function (array) {
         renderTweets(array.reverse());
       }
     });
   }
+  loadTweets();
 
 $(".compose").on("click", function(event) {
-  $("#textarea").slideToggle();
+  $(".new-tweet").slideToggle();
   $("#textarea").focus();
 });
 
@@ -111,7 +112,7 @@ $("#submitTweet").on("click", function(event) {
       url : "/tweets",
       type: "POST",
       data : $("#textarea").serialize(),
-      success: function(data) {
+      success: function() {
         loadTweets();
          $("#textarea").val("");
       }
