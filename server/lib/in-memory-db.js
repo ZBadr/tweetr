@@ -8,11 +8,6 @@
 
 // module.exports = db;
 
-
-
-
-
-
 // let MC = function () {
 // console.log("In!");
 
@@ -38,4 +33,4 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
 });
 // }
 
-module.exports = MC
+// module.exports = MC

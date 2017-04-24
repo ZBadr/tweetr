@@ -57,14 +57,17 @@
 
 function createTweetElement(obj) {
   return `
-    <article>
+    <article class="tweetbox">
          <header>
-         <img src=${obj.user.avatars.large} width = 100 height = 100 >
-         <span class= "username">${obj.user.name}</span>
-         <span class= "handle">${obj.user.handle}</span>
+          <img src=${obj.user.avatars.large} width = 100 height = 100 >
+          <span class= "username">${obj.user.name}</span>
+          <span class= "handle">${obj.user.handle}</span>
          </header>
          <p>${obj.content.text}</p>
-         <footer></footer>
+         <footer>
+          <span class="icons"> <i class="fa fa-flag" aria-hidden="true"></i> <i class="fa fa-retweet" aria-hidden="true"></i> <i class="fa fa-heart" aria-hidden="true"></i> </span>
+          <div></div>
+         </footer>
        </article>`;
 
 }
@@ -115,6 +118,7 @@ $("#submitTweet").on("click", function(event) {
       success: function() {
         loadTweets();
          $("#textarea").val("");
+         $(".counter").text("140");
       }
   });
 }

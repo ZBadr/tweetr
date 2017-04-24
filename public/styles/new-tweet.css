@@ -2,10 +2,11 @@
    background-color: #eee;
    border-color: #A9A9A9;
    border-style: solid;
+   border-radius: 10px;
    padding-left: 1em;
    padding-right: 1em;
-   margin: 1em;
-   \
+   margin-bottom: 2em;
+
  }
 
  .new-tweet h2 {
@@ -24,7 +25,4 @@
 
 }
 
-.new-tweet .error {
-
-}
 

@@ -3,42 +3,57 @@
 /* tweet class for article*/
 
 /*tweet header*/
-#tweetbox header {
+.tweetbox header {
   background-color: #eee;
  /* height: 100px;*/
 }
 
-#tweetbox header .username {
-  float: center;
+.tweetbox header .username {
+  vertical-align: top;
 }
 
 /*tweet img*/
-#tweetbox header img {
-
+.tweetbox header img {
+  border-radius: 10px;
 
 }
 
 /*tweet handle (position: absolute*/
-#tweetbox header .handle {
+.tweetbox header .handle {
   float: right;
 }
 
 /*tweet p*/
-#tweetbox p {
-  height: 150px;
-  border-style: solid;
-  border-color: #eee;
+.tweetbox p {
+  height: 100px;
 }
 
 /*tweet footer*/
-#tweetbox footer {
+.tweetbox footer {
+  border-top: solid;
   border-color: #eee;
+  padding: 0 0 1.5em 0;
 
 }
 
-#tweetbox {
-  margin: 1em;
+.tweetbox footer .icons {
+  float: right;
+  margin-right: 0.5em;
+}
+
+
+.tweetbox {
+  margin: 0 0 10px 0;
   background-color: white;
   border-color: #eee;
   border-style: solid;
+  border-radius: 10px;
+}
+
+article:hover {
+filter: opacity(100%);
+}
+
+article {
+  filter: opacity(50%);
 }
